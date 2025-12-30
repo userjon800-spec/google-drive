@@ -1,9 +1,7 @@
-// Import the functions you need from the SDKs you need
 import { getApp, getApps, initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getStorage } from "firebase/storage";
 
-// Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
   authDomain: "drive-7d405.firebaseapp.com",
@@ -13,8 +11,8 @@ const firebaseConfig = {
   appId: "1:831430469300:web:841de30aa21beaf5c0d9e1",
 };
 
-// Initialize Firebase
 // eslint-disable-next-line @typescript-eslint/no-unused-expressions
 !getApps().length ? initializeApp(firebaseConfig) : getApp();
 const db = getFirestore();
-export { db };
+const storage = getStorage();
+export { db, storage };
