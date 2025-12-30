@@ -1,7 +1,7 @@
-"use client";
 import Navbar from "@/components/shared/navbar";
+import Sidebar from "@/components/shared/sidebar";
 import { ChildProps } from "@/types";
-import { Sidebar } from "lucide-react";
+
 const AuthLayout = ({ children }: ChildProps) => {
   return (
     <div className="relative">
